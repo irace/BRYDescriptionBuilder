@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		936F304B18BAC35200DB6B77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936F304A18BAC35200DB6B77 /* Foundation.framework */; };
+		936F305018BAC35200DB6B77 /* BRYDescriptionBuilder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 936F304F18BAC35200DB6B77 /* BRYDescriptionBuilder.h */; };
+		936F305218BAC35200DB6B77 /* BRYDescriptionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 936F305118BAC35200DB6B77 /* BRYDescriptionBuilder.m */; };
+		936F305918BAC35200DB6B77 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936F305818BAC35200DB6B77 /* XCTest.framework */; };
+		936F305A18BAC35200DB6B77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936F304A18BAC35200DB6B77 /* Foundation.framework */; };
+		936F305C18BAC35200DB6B77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936F305B18BAC35200DB6B77 /* UIKit.framework */; };
+		936F305F18BAC35200DB6B77 /* libBRYDescriptionBuilder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 936F304718BAC35200DB6B77 /* libBRYDescriptionBuilder.a */; };
+		936F306518BAC35200DB6B77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 936F306318BAC35200DB6B77 /* InfoPlist.strings */; };
+		936F306718BAC35200DB6B77 /* BRYDescriptionBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 936F306618BAC35200DB6B77 /* BRYDescriptionBuilderTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		936F305D18BAC35200DB6B77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 936F303F18BAC35200DB6B77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 936F304618BAC35200DB6B77;
+			remoteInfo = BRYDescriptionBuilder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		936F304518BAC35200DB6B77 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				936F305018BAC35200DB6B77 /* BRYDescriptionBuilder.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		936F304718BAC35200DB6B77 /* libBRYDescriptionBuilder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBRYDescriptionBuilder.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		936F304A18BAC35200DB6B77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		936F304E18BAC35200DB6B77 /* BRYDescriptionBuilder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BRYDescriptionBuilder-Prefix.pch"; sourceTree = "<group>"; };
+		936F304F18BAC35200DB6B77 /* BRYDescriptionBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRYDescriptionBuilder.h; sourceTree = "<group>"; };
+		936F305118BAC35200DB6B77 /* BRYDescriptionBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRYDescriptionBuilder.m; sourceTree = "<group>"; };
+		936F305718BAC35200DB6B77 /* BRYDescriptionBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BRYDescriptionBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		936F305818BAC35200DB6B77 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		936F305B18BAC35200DB6B77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		936F306218BAC35200DB6B77 /* BRYDescriptionBuilderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BRYDescriptionBuilderTests-Info.plist"; sourceTree = "<group>"; };
+		936F306418BAC35200DB6B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		936F306618BAC35200DB6B77 /* BRYDescriptionBuilderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRYDescriptionBuilderTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		936F304418BAC35200DB6B77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				936F304B18BAC35200DB6B77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		936F305418BAC35200DB6B77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				936F305F18BAC35200DB6B77 /* libBRYDescriptionBuilder.a in Frameworks */,
+				936F305918BAC35200DB6B77 /* XCTest.framework in Frameworks */,
+				936F305C18BAC35200DB6B77 /* UIKit.framework in Frameworks */,
+				936F305A18BAC35200DB6B77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		936F303E18BAC35200DB6B77 = {
+			isa = PBXGroup;
+			children = (
+				936F304C18BAC35200DB6B77 /* BRYDescriptionBuilder */,
+				936F306018BAC35200DB6B77 /* BRYDescriptionBuilderTests */,
+				936F304918BAC35200DB6B77 /* Frameworks */,
+				936F304818BAC35200DB6B77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		936F304818BAC35200DB6B77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				936F304718BAC35200DB6B77 /* libBRYDescriptionBuilder.a */,
+				936F305718BAC35200DB6B77 /* BRYDescriptionBuilderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		936F304918BAC35200DB6B77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				936F304A18BAC35200DB6B77 /* Foundation.framework */,
+				936F305818BAC35200DB6B77 /* XCTest.framework */,
+				936F305B18BAC35200DB6B77 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		936F304C18BAC35200DB6B77 /* BRYDescriptionBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				936F304F18BAC35200DB6B77 /* BRYDescriptionBuilder.h */,
+				936F305118BAC35200DB6B77 /* BRYDescriptionBuilder.m */,
+				936F304D18BAC35200DB6B77 /* Supporting Files */,
+			);
+			path = BRYDescriptionBuilder;
+			sourceTree = "<group>";
+		};
+		936F304D18BAC35200DB6B77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				936F304E18BAC35200DB6B77 /* BRYDescriptionBuilder-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		936F306018BAC35200DB6B77 /* BRYDescriptionBuilderTests */ = {
+			isa = PBXGroup;
+			children = (
+				936F306618BAC35200DB6B77 /* BRYDescriptionBuilderTests.m */,
+				936F306118BAC35200DB6B77 /* Supporting Files */,
+			);
+			path = BRYDescriptionBuilderTests;
+			sourceTree = "<group>";
+		};
+		936F306118BAC35200DB6B77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				936F306218BAC35200DB6B77 /* BRYDescriptionBuilderTests-Info.plist */,
+				936F306318BAC35200DB6B77 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		936F304618BAC35200DB6B77 /* BRYDescriptionBuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 936F306A18BAC35200DB6B77 /* Build configuration list for PBXNativeTarget "BRYDescriptionBuilder" */;
+			buildPhases = (
+				936F304318BAC35200DB6B77 /* Sources */,
+				936F304418BAC35200DB6B77 /* Frameworks */,
+				936F304518BAC35200DB6B77 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BRYDescriptionBuilder;
+			productName = BRYDescriptionBuilder;
+			productReference = 936F304718BAC35200DB6B77 /* libBRYDescriptionBuilder.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		936F305618BAC35200DB6B77 /* BRYDescriptionBuilderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 936F306D18BAC35200DB6B77 /* Build configuration list for PBXNativeTarget "BRYDescriptionBuilderTests" */;
+			buildPhases = (
+				936F305318BAC35200DB6B77 /* Sources */,
+				936F305418BAC35200DB6B77 /* Frameworks */,
+				936F305518BAC35200DB6B77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				936F305E18BAC35200DB6B77 /* PBXTargetDependency */,
+			);
+			name = BRYDescriptionBuilderTests;
+			productName = BRYDescriptionBuilderTests;
+			productReference = 936F305718BAC35200DB6B77 /* BRYDescriptionBuilderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		936F303F18BAC35200DB6B77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Bryan Irace";
+			};
+			buildConfigurationList = 936F304218BAC35200DB6B77 /* Build configuration list for PBXProject "BRYDescriptionBuilder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 936F303E18BAC35200DB6B77;
+			productRefGroup = 936F304818BAC35200DB6B77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				936F304618BAC35200DB6B77 /* BRYDescriptionBuilder */,
+				936F305618BAC35200DB6B77 /* BRYDescriptionBuilderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		936F305518BAC35200DB6B77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				936F306518BAC35200DB6B77 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		936F304318BAC35200DB6B77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				936F305218BAC35200DB6B77 /* BRYDescriptionBuilder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		936F305318BAC35200DB6B77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				936F306718BAC35200DB6B77 /* BRYDescriptionBuilderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		936F305E18BAC35200DB6B77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 936F304618BAC35200DB6B77 /* BRYDescriptionBuilder */;
+			targetProxy = 936F305D18BAC35200DB6B77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		936F306318BAC35200DB6B77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				936F306418BAC35200DB6B77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		936F306818BAC35200DB6B77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		936F306918BAC35200DB6B77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		936F306B18BAC35200DB6B77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/BRYDescriptionBuilder.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BRYDescriptionBuilder/BRYDescriptionBuilder-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		936F306C18BAC35200DB6B77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/BRYDescriptionBuilder.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BRYDescriptionBuilder/BRYDescriptionBuilder-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		936F306E18BAC35200DB6B77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BRYDescriptionBuilder/BRYDescriptionBuilder-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BRYDescriptionBuilderTests/BRYDescriptionBuilderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		936F306F18BAC35200DB6B77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BRYDescriptionBuilder/BRYDescriptionBuilder-Prefix.pch";
+				INFOPLIST_FILE = "BRYDescriptionBuilderTests/BRYDescriptionBuilderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		936F304218BAC35200DB6B77 /* Build configuration list for PBXProject "BRYDescriptionBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				936F306818BAC35200DB6B77 /* Debug */,
+				936F306918BAC35200DB6B77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		936F306A18BAC35200DB6B77 /* Build configuration list for PBXNativeTarget "BRYDescriptionBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				936F306B18BAC35200DB6B77 /* Debug */,
+				936F306C18BAC35200DB6B77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		936F306D18BAC35200DB6B77 /* Build configuration list for PBXNativeTarget "BRYDescriptionBuilderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				936F306E18BAC35200DB6B77 /* Debug */,
+				936F306F18BAC35200DB6B77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 936F303F18BAC35200DB6B77 /* Project object */;
+}
