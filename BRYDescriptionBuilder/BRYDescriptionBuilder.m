@@ -10,7 +10,8 @@
 
 @interface BRYDescriptionBuilder()
 
-@property (nonatomic) NSMutableString *mutableDescription;
+@property (nonatomic) id object;
+@property (nonatomic) NSMutableArray *mutableComponentStrings;
 
 @end
 
@@ -24,8 +25,9 @@
 
 - (instancetype)initWithObject:(id)object {
     if (self = [super init]) {
-        _mutableDescription = [[NSMutableString alloc] initWithString:
-                               [NSString stringWithFormat:@"%@[", object]];
+        _object = object;
+
+        _mutableComponentStrings = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -58,13 +60,13 @@
 }
 
 - (NSString *)description {
-    return [self.mutableDescription stringByAppendingString:@"]"];
+    return [NSString stringWithFormat:@"%@ {%@\n}", self.object, [self.mutableComponentStrings componentsJoinedByString:@","]];
 }
 
 #pragma mark - Private
 
 - (BRYDescriptionBuilder *)appendString:(NSString *)string withName:(NSString *)name {
-    [self.mutableDescription appendFormat:@", %@=%@", name, string];
+    [self.mutableComponentStrings addObject:[NSString stringWithFormat:@"\n\t%@ = %@", name, string]];
     
     return self;
 }
