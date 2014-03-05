@@ -9,9 +9,26 @@
 @import Foundation;
 @import CoreGraphics;
 
-// http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/builder/ToStringBuilder.html
+/**
+ Utility for producing object descriptions, based on Apache Commons [EqualsBuilder](http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/builder/ToStringBuilder.html). Useful for implemeting `-[NSObject description]` methods.
+ 
+ - (NSString *)description {
+     return [[[[[[BRYDescriptionBuilder builderWithObject:object]
+                 appendObject:self.name withName:@"name"]
+                appendBool:self.isHidden withName:@"isHidden"]
+               appendFloat:self.width withName:@"width"]
+              appendInteger:self.index withName:@"index"]
+             description];
+ }
+ */
 @interface BRYDescriptionBuilder : NSObject
 
+/**
+ Factory method for acquiring a `BRYDescriptionBuilder` instance.
+ 
+ @param object Object to produce a string description for
+ @return `BRYDescriptionBuilder` instance seeded with the initial value and multiplier
+ */
 + (instancetype)builderWithObject:(id)object;
 
 - (BRYDescriptionBuilder *)appendSuper;
