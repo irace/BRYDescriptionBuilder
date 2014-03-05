@@ -60,7 +60,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@ {%@\n}", self.object, [self.mutableComponentStrings componentsJoinedByString:@","]];
+    return [NSString stringWithFormat:@"{%@\n}", [self.mutableComponentStrings componentsJoinedByString:@","]];
 }
 
 #pragma mark - Private
