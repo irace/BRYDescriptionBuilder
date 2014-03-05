@@ -31,7 +31,7 @@
  */
 + (instancetype)builderWithObject:(id)object;
 
-- (BRYDescriptionBuilder *)appendSuper;
+- (BRYDescriptionBuilder *)appendSuperDescription:(NSString *)superDescription;
 
 - (BRYDescriptionBuilder *)appendObject:(id)object withName:(NSString *)name;
 
