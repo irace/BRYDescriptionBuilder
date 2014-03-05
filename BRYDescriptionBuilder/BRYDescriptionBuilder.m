@@ -15,6 +15,11 @@
 
 @end
 
+static NSString *BRYIncreasedIndentString(NSString *string)
+{
+    return [string stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\t"];
+}
+
 @implementation BRYDescriptionBuilder
 
 #pragma mark - Initialization
@@ -66,7 +71,7 @@
 #pragma mark - Private
 
 - (BRYDescriptionBuilder *)appendString:(NSString *)string withName:(NSString *)name {
-    [self.mutableComponentStrings addObject:[NSString stringWithFormat:@"\n\t%@ = %@", name, string]];
+    [self.mutableComponentStrings addObject:[NSString stringWithFormat:@"\n\t%@ = %@", name, BRYIncreasedIndentString(string)]];
     
     return self;
 }
