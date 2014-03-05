@@ -35,10 +35,6 @@
 
 #pragma mark - Value appending
 
-- (BRYDescriptionBuilder *)appendSuper {
-    return [self appendString:[super description] withName:@"super"];
-}
-
 - (BRYDescriptionBuilder *)appendObject:(id)object withName:(NSString *)name {
     return [self appendString:[object description] withName:name];
 }
