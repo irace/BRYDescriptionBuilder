@@ -64,6 +64,15 @@ static NSString *BRYIncreasedIndentString(NSString *string)
     return [self appendString:[NSString stringWithFormat:@"%f", floatValue] withName:name];
 }
 
+- (instancetype)appendPropertiesWithKeyPaths:(NSArray *)keys
+{
+    for (NSString *key in keys) {
+        NSAssert([key isKindOfClass:[NSString class]], @"The keys must be `NSString` objects");
+        [self appendString:[[self.object valueForKeyPath:key] description] withName:key];
+    }
+    return self;
+}
+
 - (NSString *)description {
     return [NSString stringWithFormat:@"{%@\n}", [self.mutableComponentStrings componentsJoinedByString:@","]];
 }

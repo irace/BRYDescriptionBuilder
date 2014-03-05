@@ -13,7 +13,16 @@
 
 @end
 
-@interface BRYDescriptionBuilderTestObject : NSObject
+@interface BRYIndividualPropertyObject : NSObject
+
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSNumber *age;
+@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, copy) NSArray *friends;
+
+@end
+
+@interface BRYKeyPathsObject : NSObject
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSNumber *age;
@@ -36,29 +45,90 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testBuilderUsingKeyPathList
 {
-    BRYDescriptionBuilderTestObject *object = [BRYDescriptionBuilderTestObject new];
+    BRYKeyPathsObject *object = [BRYKeyPathsObject new];
     object.name = @"Samuel";
     object.age = @19;
     object.height = 175.26f;
-    object.friends = @[@"Woody", @"Ernesto"];
-    NSString *expected = [NSString stringWithFormat:@"{\n\t" "super = <%@: %p>" ",\n\t" "name = %@" ",\n\t" "age = %@" ",\n\t" "height = %f" ",\n\t" "friends = %@" "\n}", NSStringFromClass([object class]), object, object.name, object.age, object.height, [object.friends.description stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\t"]];
+    object.friends = @[
+        @"Woody",
+        @"Ernesto"
+    ];
+    NSString *expected = [NSString stringWithFormat:@"{\n\t"
+                                                     "super = <%@: %p>"
+                                                     ",\n\t"
+                                                     "name = %@"
+                                                     ",\n\t"
+                                                     "age = %@"
+                                                     ",\n\t"
+                                                     "height = %@"
+                                                     ",\n\t"
+                                                     "friends = %@"
+                                                     "\n}",
+                                                    NSStringFromClass([object class]), object, object.name, object.age, @(object.height), [object.friends.description stringByReplacingOccurrencesOfString:@"\n"
+                                                                                                                                                                                                withString:@"\n\t"]];
+    XCTAssertEqualObjects(object.description, expected, @"The description should match the expected value");
+}
+
+- (void)testBuilderUsingIndividualProperties
+{
+    BRYIndividualPropertyObject *object = [BRYIndividualPropertyObject new];
+    object.name = @"Samuel";
+    object.age = @19;
+    object.height = 175.26f;
+    object.friends = @[
+        @"Woody",
+        @"Ernesto"
+    ];
+    NSString *expected = [NSString stringWithFormat:@"{\n\t"
+                                                     "super = <%@: %p>"
+                                                     ",\n\t"
+                                                     "name = %@"
+                                                     ",\n\t"
+                                                     "age = %@"
+                                                     ",\n\t"
+                                                     "height = %f"
+                                                     ",\n\t"
+                                                     "friends = %@"
+                                                     "\n}",
+                                                    NSStringFromClass([object class]), object, object.name, object.age, object.height, [object.friends.description stringByReplacingOccurrencesOfString:@"\n"
+                                                                                                                                                                                                withString:@"\n\t"]];
     XCTAssertEqualObjects(object.description, expected, @"The description should match the expected value");
 }
 
 @end
 
-@implementation BRYDescriptionBuilderTestObject
+@implementation BRYKeyPathsObject
+
+- (NSString *)description
+{
+    return [[[BRYDescriptionBuilder builderWithObject:self]
+                appendSuperDescription:[super description]]
+        appendPropertiesWithKeyPaths:@[
+                                         @"name",
+                                         @"age",
+                                         @"height",
+                                         @"friends"
+                                     ]].description;
+}
+
+@end
+
+@implementation BRYIndividualPropertyObject
 
 - (NSString *)description
 {
     return [[[[[[BRYDescriptionBuilder builderWithObject:self]
-                appendSuperDescription:[super description]]
-               appendObject:self.name withName:@"name"]
-              appendObject:self.age withName:@"age"]
-             appendFloat:self.height withName:@"height"]
-            appendObject:self.friends withName:@"friends"].description;
+                   appendSuperDescription:[super description]]
+                  appendObject:self.name
+                      withName:@"name"]
+                 appendObject:self.age
+                     withName:@"age"]
+                appendFloat:self.height
+                   withName:@"height"]
+        appendObject:self.friends
+            withName:@"friends"].description;
 }
 
 @end

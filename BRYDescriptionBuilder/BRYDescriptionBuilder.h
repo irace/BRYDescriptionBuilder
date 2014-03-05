@@ -31,17 +31,19 @@
  */
 + (instancetype)builderWithObject:(id)object;
 
-- (BRYDescriptionBuilder *)appendSuperDescription:(NSString *)superDescription;
+- (instancetype)appendSuperDescription:(NSString *)superDescription;
 
-- (BRYDescriptionBuilder *)appendObject:(id)object withName:(NSString *)name;
+- (instancetype)appendObject:(id)object withName:(NSString *)name;
 
-- (BRYDescriptionBuilder *)appendInteger:(NSInteger)integer withName:(NSString *)name;
+- (instancetype)appendInteger:(NSInteger)integer withName:(NSString *)name;
 
-- (BRYDescriptionBuilder *)appendUnsignedInteger:(NSUInteger)unsignedInteger withName:(NSString *)name;
+- (instancetype)appendUnsignedInteger:(NSUInteger)unsignedInteger withName:(NSString *)name;
 
-- (BRYDescriptionBuilder *)appendBool:(BOOL)boolean withName:(NSString *)name;
+- (instancetype)appendBool:(BOOL)boolean withName:(NSString *)name;
 
-- (BRYDescriptionBuilder *)appendFloat:(CGFloat)floatValue withName:(NSString *)name;
+- (instancetype)appendFloat:(CGFloat)floatValue withName:(NSString *)name;
+
+- (instancetype)appendPropertiesWithKeyPaths:(NSArray *)keys;
 
 - (NSString *)description;
 
