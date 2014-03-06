@@ -40,11 +40,23 @@
 }
 
 - (BRYDescriptionBuilder *)appendInteger:(NSInteger)integer withName:(NSString *)name {
-    return [self appendString:[NSString stringWithFormat:@"%li", (long)integer] withName:name];
+#if defined(__LP64__) && __LP64__
+    // on 64-bit archs, NSInteger is typedef'd to long
+    return [self appendString:[NSString stringWithFormat:@"%li", integer] withName:name];
+#else
+    // on 32-bit archs, NSInteger is typedef'd to int
+    return [self appendString:[NSString stringWithFormat:@"%i", integer] withName:name];
+#endif
 }
 
 - (BRYDescriptionBuilder *)appendUnsignedInteger:(NSUInteger)unsignedInteger withName:(NSString *)name {
-    return [self appendString:[NSString stringWithFormat:@"%lu", (unsigned long)unsignedInteger] withName:name];
+#if defined(__LP64__) && __LP64__
+    // on 64-bit archs, NSUInteger is typedef'd to unsigned long
+    return [self appendString:[NSString stringWithFormat:@"%lu", unsignedInteger] withName:name];
+#else
+    // on 32-bit archs, NSUInteger is typedef'd to unsigned int
+    return [self appendString:[NSString stringWithFormat:@"%u", unsignedInteger] withName:name];
+#endif
 }
 
 - (BRYDescriptionBuilder *)appendBool:(BOOL)boolean withName:(NSString *)name {
@@ -52,7 +64,13 @@
 }
 
 - (BRYDescriptionBuilder *)appendFloat:(CGFloat)floatValue withName:(NSString *)name {
+#if defined(__LP64__) && __LP64__
+    // on 64-bit archs, CGFloat is typedef'd to double
+    return [self appendString:[NSString stringWithFormat:@"%e", floatValue] withName:name];
+#else
+    // on 32-bit archs, CGFloat is typedef'd to float
     return [self appendString:[NSString stringWithFormat:@"%f", floatValue] withName:name];
+#endif
 }
 
 - (NSString *)description {
