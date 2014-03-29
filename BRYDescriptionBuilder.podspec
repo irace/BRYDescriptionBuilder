@@ -5,9 +5,8 @@ Pod::Spec.new do |s|
   s.homepage     = "http://github.com/irace/BRYDescriptionBuilder"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Bryan Irace" => "bryan@irace.me" }
-  s.platform     = :ios, '5.0'
   s.source       = { :git => "https://github.com/irace/BRYDescriptionBuilder.git", :tag => "1.0.0" }
   s.source_files = 'BRYDescriptionBuilder'
-  s.framework    = 'Foundation', 'UIKit'
+  s.framework    = 'Foundation'
   s.requires_arc = true
 end
